@@ -1,0 +1,31 @@
+
+     active environment : None
+       user config file : /Users/jsr.ovo._/.condarc
+ populated config files : /Users/jsr.ovo._/anaconda3/.condarc
+                          /Users/jsr.ovo._/anaconda3/condarc.d/anaconda-auth.yml
+          conda version : 26.5.3
+    conda-build version : 26.5.0
+         python version : 3.14.6.final.0
+                 solver : libmamba (default)
+       virtual packages : __archspec=1=m4
+                          __conda=26.5.3=0
+                          __osx=15.1=0
+                          __unix=0=0
+       base environment : /Users/jsr.ovo._/anaconda3  (writable)
+      conda av data dir : /Users/jsr.ovo._/anaconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/osx-arm64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/osx-arm64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /Users/jsr.ovo._/anaconda3/pkgs
+                          /Users/jsr.ovo._/.conda/pkgs
+       envs directories : /Users/jsr.ovo._/anaconda3/envs
+                          /Users/jsr.ovo._/.conda/envs
+    temporary directory : /var/folders/_d/tstckvp90tn2cjp23w7v85zw0000gn/T
+               platform : osx-arm64
+             user-agent : conda/26.5.3 requests/2.34.2 CPython/3.14.6 Darwin/24.1.0 OSX/15.1 solver/libmamba conda-libmamba-solver/26.7.0 libmambapy/2.3.2 aau/0.8.1 c/. s/. e/.
+                UID:GID : 501:20
+             netrc file : None
+           offline mode : False
+
