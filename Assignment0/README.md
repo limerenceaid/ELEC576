@@ -9,7 +9,7 @@ Report: [`ELEC576_Assignment0_Report.pdf`](ELEC576_Assignment0_Report.pdf)
 | `outputs/task1_conda_info.txt` | 1 | `conda info` |
 | `outputs/task1_conda_list.txt` | 1 | `conda list`, 552 packages |
 | `task2_linalg.py` | 2 | drives all 82 rows of *Linear Algebra Equivalents* through IPython |
-| `outputs/task2_transcript.txt` | 2 | the resulting 161-cell transcript |
+| `outputs/task2_transcript.txt` | 2 | the resulting transcript, one command per row |
 | `task3_plot.py` → `figures/task3.png` | 3 | the assignment's plotting script |
 | `task4_plot.py` → `figures/task4.png` | 4 | activation functions and their derivatives |
 | `screenshots/task1_conda_info.png` | 1 | terminal capture pasted into the report |
