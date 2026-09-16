@@ -1,10 +1,3 @@
-"""
-ELEC 576 / COMP 576 - Assignment 0, Task 2
-One command per row of the "Linear Algebra Equivalents" table in
-"NumPy for MATLAB Users", all 82 rows, executed in IPython.
-
-Run with:  ipython task2_linalg.py
-"""
 import re
 from IPython.core.interactiveshell import InteractiveShell
 from IPython.utils.capture import capture_output
@@ -12,7 +5,6 @@ from IPython.utils.capture import capture_output
 shell = InteractiveShell.instance()
 shell.colors = "NoColor"
 _n = 0
-
 
 def run(cmd):
     global _n
@@ -29,12 +21,10 @@ def run(cmd):
     if res.error_in_exec is not None:
         print(f"{type(res.error_in_exec).__name__}: {res.error_in_exec}")
 
-
 def row(num, matlab, cmd):
     hdr = f"--- Row {num} --- MATLAB: {matlab} "
     print("\n" + hdr + "-" * max(3, 78 - len(hdr)))
     run(cmd)
-
 
 print("--- Setup " + "-" * 68)
 for s in [

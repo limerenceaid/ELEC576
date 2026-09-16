@@ -1,4 +1,3 @@
-"""Build the Assignment 0 report PDF.  Run with:  python make_report.py"""
 import os, textwrap, datetime
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -33,7 +32,6 @@ CODE = ParagraphStyle("CODE", parent=ss["Code"], fontName="Courier", fontSize=6.
                       borderPadding=4, spaceBefore=2, spaceAfter=6)
 CODE_BIG = ParagraphStyle("CODE_BIG", parent=CODE, fontSize=8, leading=9.8)
 
-
 def code(text, style=CODE, width=None):
     if width is None:
         usable = letter[0] - 1.7 * inch - 2 * style.borderPadding
@@ -48,25 +46,23 @@ def code(text, style=CODE, width=None):
                                  break_long_words=True, break_on_hyphens=False) or [line]
     return Preformatted("\n".join(out), style)
 
+def pic(path, width):
+    iw, ih = ImageReader(path).getSize()
+    w = width * inch
+    return Image(path, width=w, height=w * ih / iw)
+
 
 def shot(name, width=6.6):
     path = f"screenshots/{name}.png"
-    if not os.path.exists(path):
-        return None
-    iw, ih = ImageReader(path).getSize()
-    w = min(width, 6.6) * inch
-    return Image(path, width=w, height=w * ih / iw)
-
+    return pic(path, min(width, 6.6)) if os.path.exists(path) else None
 
 def read(p):
     with open(p) as f:
         return f.read()
 
-
 S = [Paragraph("Assignment 0", TITLE),
      Paragraph(f"{STUDENT} &nbsp;&middot;&nbsp; Rice ID: {RICE_ID}", BYLINE)]
 
-# --------------------------------------------------------------- task 1 ----
 S += [Paragraph("1&nbsp;&nbsp;Anaconda", H1),
       Paragraph(
           "<font face='Courier'>Anaconda3-2026.07-1-MacOSX-arm64.sh</font> installed into "
@@ -78,8 +74,7 @@ S += [Paragraph("1&nbsp;&nbsp;Anaconda", H1),
       Paragraph("Task 1 &mdash; <font face='Courier'>conda info</font>", H2)]
 S += [shot("task1_conda_info") or code(read("outputs/task1_conda_info.txt"), CODE_BIG)]
 
-# --------------------------------------------------------------- task 2 ----
-S += [Paragraph("2&nbsp;&nbsp;MATLAB to Python &mdash; Linear Algebra Equivalents", H1),
+S += [Paragraph("2&nbsp;&nbsp;Linear Algebra Equivalents", H1),
       Paragraph(
           "All 82 rows of the table were run in IPython, one command per row. My matrices: "
           "<font face='Courier'>a, b, c, d</font> are 5&times;5 drawn uniformly from [0,1) and "
@@ -125,36 +120,32 @@ for ch in chunks:
     if ch.strip():
         S.append(code(ch))
 
-# ------------------------------------------------------------ tasks 3, 4 ---
 S += [PageBreak(),
-      Paragraph("3&nbsp;&nbsp;Plotting &mdash; the given script", H1),
+      Paragraph("3&nbsp;&nbsp;Plotting", H1),
       code("import matplotlib.pyplot as plt\n"
            "plt.plot([1,2,3,4], [1,2,7,14])\n"
            "plt.axis([0, 6, 0, 20])\n"
            "plt.show()", CODE_BIG),
       Paragraph(
-          "Run verbatim in IPython. To capture it, the script was run under the "
-          "<font face='Courier'>Agg</font> backend with a trailing "
-          "<font face='Courier'>plt.savefig</font>; under <font face='Courier'>Agg</font>, "
-          "<font face='Courier'>plt.show()</font> warns that it cannot display interactively, "
-          "which does not affect the figure.", BODY),
-      shot("task3_figure", 4.3) or Image("figures/task3.png", width=4.1 * inch, height=3.01 * inch),
+          "Run verbatim in IPython. The figure was written to file with the "
+          "<font face='Courier'>Agg</font> backend and a trailing "
+          "<font face='Courier'>plt.savefig</font>.", BODY),
+      shot("task3_figure", 4.3) or pic("figures/task3.png", 4.1),
 
-      Paragraph("4&nbsp;&nbsp;Plotting &mdash; a figure of my own", H1),
+      Paragraph("4&nbsp;&nbsp;Activation functions", H1),
       Paragraph(
-          "The three classical activation functions against their derivatives. The right panel is the "
-          "point: sigmoid's derivative peaks at 0.25 and decays to zero in both tails, so a product of "
-          "many such factors vanishes with depth, while ReLU's is exactly 1 on the positive half-line.", BODY),
-      shot("task4_figure") or Image("figures/task4.png", width=6.6 * inch, height=2.77 * inch),
+          "Sigmoid, tanh and ReLU with their derivatives. Sigmoid and tanh saturate, so their "
+          "derivatives fall to zero away from the origin and sigmoid's never exceeds 0.25. ReLU's "
+          "derivative is 1 on the positive half-line.", BODY),
+      shot("task4_figure") or pic("figures/task4.png", 6.6),
       Spacer(1, 6),
       code(read("task4_plot.py"), CODE)]
 
-# ------------------------------------------------------------ tasks 5, 6 ---
 S += [KeepTogether([
-      Paragraph("5&nbsp;&nbsp;Version Control &mdash; GitHub account", H1),
+      Paragraph("5&nbsp;&nbsp;GitHub account", H1),
       code(f"{GH_USER}   ->   https://github.com/{GH_USER}", CODE_BIG)]),
       KeepTogether([
-      Paragraph("6&nbsp;&nbsp;IDE project, pushed to GitHub", H1),
+      Paragraph("6&nbsp;&nbsp;Project repository", H1),
       Paragraph(
           "Created as a Python project against the Anaconda interpreter from Task 1, committed with "
           "git and pushed as a public repository. This assignment is the "
