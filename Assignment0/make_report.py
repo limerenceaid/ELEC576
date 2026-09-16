@@ -159,16 +159,7 @@ S += [KeepTogether([
           "Created as a Python project against the Anaconda interpreter from Task 1, committed with "
           "git and pushed as a public repository. This assignment is the "
           "<font face='Courier'>Assignment0/</font> folder.", BODY),
-      code(REPO_URL, CODE_BIG)]),
-
-      Paragraph("Sources", H1),
-      Paragraph("NumPy developers, <i>NumPy for MATLAB Users</i>, "
-                "numpy.org/doc/stable/user/numpy-for-matlab-users.html &mdash; the table used in Task 2.", NOTE),
-      Paragraph("The Matplotlib development team, <i>Pyplot Tutorial</i>, "
-                "matplotlib.org/stable/tutorials/pyplot.html &mdash; Tasks 3 and 4.", NOTE),
-      Paragraph("Anaconda Inc., <i>Installing on macOS</i>, docs.anaconda.com/anaconda/install/mac-os/ "
-                "&mdash; Task 1.", NOTE),
-      Paragraph("The Task 3 script is quoted from the handout; all other code here is my own.", NOTE)]
+      code(REPO_URL, CODE_BIG)])]
 
 doc = SimpleDocTemplate(OUT, pagesize=letter,
                         leftMargin=0.85 * inch, rightMargin=0.85 * inch,
