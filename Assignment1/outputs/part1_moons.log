@@ -1,0 +1,27 @@
+e1 tanh {'train_acc': 0.975, 'test_acc': 0.967, 'loss': 0.0713158087590137}
+e1 sigmoid {'train_acc': 0.975, 'test_acc': 0.967, 'loss': 0.0781553944606991}
+e1 relu {'train_acc': 0.98, 'test_acc': 0.963, 'loss': 0.07107768600158566}
+e2 1 {'train_acc': 0.865, 'test_acc': 0.8565, 'loss': 0.32836650491436475}
+e2 2 {'train_acc': 0.825, 'test_acc': 0.8085, 'loss': 0.3375790291332688}
+e2 3 {'train_acc': 0.975, 'test_acc': 0.967, 'loss': 0.0713158087590137}
+e2 4 {'train_acc': 0.99, 'test_acc': 0.967, 'loss': 0.05020421973511335}
+e2 5 {'train_acc': 0.99, 'test_acc': 0.955, 'loss': 0.03903670466112318}
+e2 10 {'train_acc': 0.99, 'test_acc': 0.946, 'loss': 0.030548816977901492}
+e2 20 {'train_acc': 0.99, 'test_acc': 0.948, 'loss': 0.03073513808819028}
+e2 50 {'train_acc': 0.99, 'test_acc': 0.949, 'loss': 0.030990262184810283}
+f depth tanh 3 {'train_acc': 0.985, 'test_acc': 0.9665, 'loss': 0.11586997764251168}
+f depth tanh 4 {'train_acc': 0.985, 'test_acc': 0.9675, 'loss': 0.0832168522272842}
+f depth tanh 6 {'train_acc': 0.99, 'test_acc': 0.9555, 'loss': 0.05122680629217023}
+f depth tanh 10 {'train_acc': 0.99, 'test_acc': 0.9535, 'loss': 0.04549671060101222}
+f depth sigmoid 3 {'train_acc': 0.955, 'test_acc': 0.9525, 'loss': 0.20712093493183026}
+f depth sigmoid 4 {'train_acc': 0.97, 'test_acc': 0.9655, 'loss': 0.1877441684797062}
+f depth sigmoid 6 {'train_acc': 0.98, 'test_acc': 0.963, 'loss': 0.1831721289706692}
+f depth sigmoid 10 {'train_acc': 0.5, 'test_acc': 0.5, 'loss': 0.6939118341042372}
+f depth relu 3 {'train_acc': 0.985, 'test_acc': 0.963, 'loss': 0.11156746127374909}
+f depth relu 4 {'train_acc': 0.99, 'test_acc': 0.965, 'loss': 0.07166182275183365}
+f depth relu 6 {'train_acc': 0.995, 'test_acc': 0.9615, 'loss': 0.03889262544327168}
+f depth relu 10 {'train_acc': 0.99, 'test_acc': 0.966, 'loss': 0.05908507197628045}
+f width 2 {'train_acc': 0.975, 'test_acc': 0.9585, 'loss': 0.10964465630383871}
+f width 3 {'train_acc': 0.985, 'test_acc': 0.958, 'loss': 0.05871605944421657}
+f width 10 {'train_acc': 0.99, 'test_acc': 0.9555, 'loss': 0.05122680629217023}
+f width 50 {'train_acc': 0.99, 'test_acc': 0.9565, 'loss': 0.052991415882209944}

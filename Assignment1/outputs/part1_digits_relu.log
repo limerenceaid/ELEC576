@@ -1,0 +1,6 @@
+f digits relu 3 32 {'loss': 0.054980140898068124, 'train_acc': 1.0, 'test_acc': 0.9733333333333334}
+f digits relu 3 128 {'loss': 0.07007729528864828, 'train_acc': 1.0, 'test_acc': 0.9777777777777777}
+f digits relu 4 32 {'loss': 0.05685328213961263, 'train_acc': 1.0, 'test_acc': 0.9777777777777777}
+f digits relu 4 128 {'loss': 0.08844931831311736, 'train_acc': 1.0, 'test_acc': 0.9777777777777777}
+f digits relu 6 32 {'loss': 0.06481985550803307, 'train_acc': 1.0, 'test_acc': 0.9644444444444444}
+f digits relu 6 128 {'loss': 0.13466313030072444, 'train_acc': 1.0, 'test_acc': 0.9822222222222222}

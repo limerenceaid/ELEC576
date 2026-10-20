@@ -4,3 +4,5 @@ __pycache__/
 
 # course handouts are the instructor's material, not mine to republish
 *Assignment_*.pdf
+*_2026.py
+*.zip

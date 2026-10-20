@@ -1,0 +1,6 @@
+f digits tanh 3 32 {'loss': 0.06962319854391855, 'train_acc': 1.0, 'test_acc': 0.98}
+f digits tanh 3 128 {'loss': 0.07454076742241103, 'train_acc': 1.0, 'test_acc': 0.9777777777777777}
+f digits tanh 4 32 {'loss': 0.07222516998555584, 'train_acc': 1.0, 'test_acc': 0.9777777777777777}
+f digits tanh 4 128 {'loss': 0.09241393117794947, 'train_acc': 1.0, 'test_acc': 0.9688888888888889}
+f digits tanh 6 32 {'loss': 0.08368400152235138, 'train_acc': 1.0, 'test_acc': 0.98}
+f digits tanh 6 128 {'loss': 0.13884681009733402, 'train_acc': 1.0, 'test_acc': 0.9755555555555555}
